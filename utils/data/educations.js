@@ -1,20 +1,26 @@
 export const educations = [
   {
     id: 1,
-    title: "Bachelor Degree",
-    duration: "2014 - 2018",
-    institution: "University of Nigeria",
+    title: "Certificate in Computer Graphics and Web Design",
+    duration: "2022 - 2024",
+    institution: "Muyex Creativity Academy",
   },
   {
     id: 2,
-    title: "Higher Secondary Certificate",
-    duration: "2018 - 2020",
-    institution: "Beamax Tech Academy",
+    title: "Higher Diploma in Information Technology",
+    duration: "2022 - 2024",
+    institution: "Friends College Kaimosi",
   },
   {
     id: 3,
-    title: "Secondary School Certificate",
-    duration: "2007 - 2013",
-    institution: "Igwe Ezea Memorial School",
+    title: "Kenya Certificate of Secondary Education(KCSE)",
+    duration: "2017 - 2020",
+    institution: "ST. Thomas Misikhu R.C High School",
+  },
+  {
+    id: 4,
+    title: "Kenya Certificate of Primary Education(KCPE)",
+    duration: "2006 - 2015",
+    institution: "Victory Academy Primary School, Kakamega",
   },
 ];

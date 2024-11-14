@@ -1,5 +1,5 @@
 import { GoogleTagManager } from "@next/third-parties/google";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "./components/footer";
@@ -7,18 +7,18 @@ import Navbar from "./components/navbar";
 import "./css/card.scss";
 import "./css/globals.scss";
 import ScrollToTop from "./components/helper/scroll-to-top";
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Kingsley Chibuike - Software Engineer",
+  title: "Josphate Muchiri - IT, Cybersecurity & Ethical Hacker, Graphics Designer",
   description:
-    "I am a fullstack software developer and a self taught developer. MERN, TALL, React Native, Next js, Flutter, Laravel, Tailwind css, Typescript.",
+    "I am Josphate Muchiri, a Skilled I.T professional Specializing in Cybersecurity & Ethical Hacking and Graphics Designing. I am passionate about protecting Networks, Servers, Data and Creating Secure and Visually stunning Digital Experiences.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body >
         <ToastContainer />
         <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
           <Navbar />

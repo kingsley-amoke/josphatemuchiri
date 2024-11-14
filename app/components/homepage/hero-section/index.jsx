@@ -1,19 +1,20 @@
 // @flow strict
 
 import { personalData } from "@/utils/data/personal-data";
+import { skillsData } from "@/utils/data/skills";
 import Image from "next/image";
 import Link from "next/link";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
-import { SiLeetcode } from "react-icons/si";
+import { SiFiverr, SiLeetcode } from "react-icons/si";
 
 function HeroSection() {
   return (
     <section className="relative flex flex-col items-center justify-between py-4 lg:py-12">
       <Image
-        src="/hero.svg"
+        src="/josphatemuchiri/hero.svg"
         alt="Hero"
         width={1572}
         height={795}
@@ -25,17 +26,17 @@ function HeroSection() {
           <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
             Hello, <br />
             This is <span className="text-pink-500 ">{personalData.name}</span>
-            {` , I'm a Professional `}
+            {` , I specialize in `}
             <span className=" text-[#16f2b3]">{personalData.designation}</span>.
           </h1>
 
           <div className="flex items-center gap-5 my-12">
             <Link
-              href={personalData.github}
+              href={personalData.fiverr}
               target="_blank"
               className="text-pink-500 transition-all duration-300 hover:scale-125"
             >
-              <BsGithub size={30} />
+              <SiFiverr size={30} />
             </Link>
             <Link
               href={personalData.linkedIn}
@@ -52,19 +53,13 @@ function HeroSection() {
               <FaFacebook size={30} />
             </Link>
             <Link
-              href={personalData.leetcode}
+              href={personalData.instagram}
               target="_blank"
               className="text-pink-500 transition-all duration-300 hover:scale-125"
             >
-              <SiLeetcode size={30} />
+              <BsInstagram size={30} />
             </Link>
-            <Link
-              href={personalData.twitter}
-              target="_blank"
-              className="text-pink-500 transition-all duration-300 hover:scale-125"
-            >
-              <FaTwitterSquare size={30} />
-            </Link>
+           
           </div>
 
           <div className="flex items-center gap-3">
@@ -105,41 +100,27 @@ function HeroSection() {
             <code className="font-mono text-xs md:text-sm lg:text-base">
               <div className="blink">
                 <span className="mr-2 text-pink-500">const</span>
-                <span className="mr-2 text-white">coder</span>
+                <span className="mr-2 text-white">Ethical Hacker</span>
                 <span className="mr-2 text-pink-500">=</span>
                 <span className="text-gray-400">{"{"}</span>
               </div>
               <div>
                 <span className="ml-4 mr-2 text-white lg:ml-8">name:</span>
                 <span className="text-gray-400">{`'`}</span>
-                <span className="text-amber-300">Kingsley Amoke</span>
+                <span className="text-amber-300">{personalData.name}</span>
                 <span className="text-gray-400">{`',`}</span>
               </div>
-              <div className="ml-4 mr-2 lg:ml-8">
-                <span className="text-white ">skills:</span>
-                <span className="text-gray-400">{`['`}</span>
-                <span className="text-amber-300">React</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">NextJS</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">React Native</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Express</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">MongoDB</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">PHP</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Laravel</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">MySQL</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Flutter</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Git</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Linux</span>
-                <span className="text-gray-400">{"'],"}</span>
+              <div className="flex flex-wrap ml-4 mr-2 lg:ml-8">
+                <span className="text-white ">skills: </span>
+                <span className="text-gray-400">{ `['`}</span>
+                {skillsData.map((skill, index )=>(
+                  <div className="flex flex-wrap" key={index}>
+                  <span className="text-amber-300">{skill}</span>
+                  <span className="text-gray-400">{"', '"}</span>
+                  </div>
+                ))}
+                <span className="text-gray-400">{"],"}</span>
+               
               </div>
               <div>
                 <span className="ml-4 mr-2 text-white lg:ml-8">
@@ -150,7 +131,7 @@ function HeroSection() {
               </div>
               <div>
                 <span className="ml-4 mr-2 text-white lg:ml-8">
-                  quickLearner:
+                  dedicated:
                 </span>
                 <span className="text-orange-400">true</span>
                 <span className="text-gray-400">,</span>

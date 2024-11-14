@@ -73,10 +73,25 @@ import webix from "/public/svg/skills/webix.svg";
 import wolframalpha from "/public/svg/skills/wolframalpha.svg";
 import wordpress from "/public/svg/skills/wordpress.svg";
 import linux from "/public/svg/skills/linux.svg";
+import wireshark from "/public/svg/skills/wireshark.svg";
+import metasploit from "/public/svg/skills/metasploit.svg";
+import burpsuite from "/public/svg/skills/burpsuite.svg";
+import coreddraw from "/public/svg/skills/corel-draw.svg";
+import pixellab from "/public/svg/skills/pixellab.svg"
 
 export const skillsImage = (skill) => {
   const skillID = skill.toLowerCase();
   switch (skillID) {
+    case 'pixellab':
+      return pixellab;
+    case 'coreldraw':
+      return coreddraw;
+    case 'burpsuite':
+      return burpsuite;
+    case 'metasploit':
+      return metasploit;
+    case 'wireshark':
+    return wireshark;
     case "gcp":
       return gcp;
     case "html":

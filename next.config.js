@@ -1,10 +1,14 @@
 const path = require('path')
- 
-module.exports = {
+
+const isProd = process.env.NODE_ENV === 'production';
+
+const nextConfig = {
+  reactStrictMode:true,
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
   images: {
+    unoptimized:true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -18,4 +22,17 @@ module.exports = {
       },
     ],
   },
+  assetPrefix: isProd ? '/josphatemuchiri' : '',
+  basePath: isProd ? '/josphatemuchiri' : '',
+  output:'export'
 }
+
+module.exports = nextConfig;
+
+ 
+// module.exports = {
+  
+//   images: {
+   
+//   },
+// }
